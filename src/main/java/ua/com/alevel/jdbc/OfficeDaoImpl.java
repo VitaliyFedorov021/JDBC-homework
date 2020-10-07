@@ -8,7 +8,6 @@ import java.util.List;
 public class OfficeDaoImpl implements OfficeDao {
     SQLConnection connector = new SQLConnection();
     List<OfficeEntity> offices;
-
     {
         try {
             offices = connector.readFromDB();
@@ -16,8 +15,6 @@ public class OfficeDaoImpl implements OfficeDao {
             throwables.printStackTrace();
         }
     }
-
-
 
     @Override
     public List<OfficeEntity> getAllOffices() throws SQLException {
